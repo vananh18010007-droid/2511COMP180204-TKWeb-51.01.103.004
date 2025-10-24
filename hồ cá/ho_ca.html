@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hồ cá vui nhộn</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="mystyle.css">
+    <link href="https://unpkg.com/tailwindcss@1.9.6/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <button id="change-bg" onclick="changeBackground()">Đổi hình nền</button>
+    <button id="toggle-music" onclick="toggleMusic()">Phát nhạc</button>
+    <script>
+        const backgrounds = [
+            "images/bg1.jpg",
+            "images/bg2.jpg",
+            "images/bg3.webp"
+        ];
+        let currentIndex = 0;
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % backgrounds.length;
+
+            document.body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+        }
+    </script>
+
+    <script>
+        const music = new Audio("images/nen.mp3");
+        music.loop = true;
+
+        let isPlaying = false;
+
+        function toggleMusic() {
+            const btn = document.getElementById("toggle-music");
+            if (isPlaying) {
+                music.pause();
+                btn.textContent = "Phát nhạc";
+            } else {
+                music.play();
+                btn.textContent = "Tạm dừng";
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+
+
+    <div class="aquarium" id="aquarium">
+        <div id="content">
+            <div id="shark"><img src="images/shark.png" ; width="auto" height="auto"></div>
+        </div>
+        <div id="content">
+            <div id="diver1"><img src="images/diver1.png" ; width="auto" height="auto"></div>
+        </div>
+        <div id="content">
+            <div id="diver2"><img src="images/diver2.png" ; width="auto" height="auto"></div>
+        </div>
+        <div id="content">
+            <div id="diver3"><img src="images/diver3.png" ; width="auto" height="auto"></div>
+        </div>
+        <div id="content">
+            <div id="faintschool"><img src="images/faintSchool.png" ; width="auto" height="auto"></div>
+        </div>
+        <div id="content">
+            <div id="turtle"><img src="images/turtle.png" ; width="auto" height="auto"></div>
+        </div>
+        <div id="content">
+            <div id="goldfish"><img src="images/goldFishSchool.png" ; width="auto" height="auto"></div>
+        </div>
+        <div id="content">
+            <div id="faintschool"><img src="images/faintSchool.png" ; width="auto" height="auto"></div>
+        </div>
+        <div id="content">
+            <div id="faintschool2"><img src="images/faintSchool.png" ; width="auto" height="auto"></div>
+        </div>
+    </div>
+</body>
+
+</html>

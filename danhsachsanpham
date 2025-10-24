@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Trang sản phẩm</title>
+<style>
+    p{
+        float:right
+    }
+    .tong{
+        display:inline-block
+    }
+    
+    #products {
+        display: block; 
+        max-width: 600px; 
+        margin-top: 10px;
+    }
+    .product-item {
+        display: flex; 
+        align-items: center; 
+        padding: 5px 0;
+        border-bottom: 1px solid #eee; 
+    }
+    .product-name {
+        flex-grow: 1; 
+        padding-right: 15px; 
+    }
+    button {
+        width: 70px; 
+        margin-left: 5px;
+        padding: 5px 0;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 14px;
+    }
+    .edit-btn { background-color: #f0f0f0; } 
+    .del-btn { background-color: #f0f0f0; }
+</style>
+<body onload="document.getElementById('products').innerHTML =show()">
+    <script>
+        var product_list = ['Sony Xperia', 'Samsung Galaxy', 'Nokia 6', 'Xiaomi Redmi Note 4', 'Apple IPhone 6S', 'Xiaomi Mi 5s Plus', 'Apple IPhone 8 Plus', 'Fujitsu F-04E', 'Oppo'];
+        function show() {
+    var s = '';
+    s += '<h3>Product Name: ' + product_list.length + ' products</h3>';
+    
+    for (var i = 0; i < product_list.length; i++) {
+        s += '<div class="product-item">';
+        s += '<span class="product-name">' + (i + 1) + '. ' + product_list[i] + '</span>';
+        s += ' <button class="edit-btn" onclick="edit(' + i + ')">Edit</button>';
+        s += ' <button class="del-btn" onclick="del(' + i + ')">Delete</button>';
+        s += '</div>'; 
+    }
+    return s;
+}
+        document.getElementById('products').innerHTML = show();
+        function add() {
+            var spmoi = document.getElementById('spmoi').value;
+            product_list.push(spmoi);
+            document.getElementById('products').innerHTML = show();
+        }
+        function edit(vitri) {
+            var newname = prompt("What is your new product?");
+            product_list[vitri]=newname;
+            document.getElementById('products').innerHTML = show();
+        }
+        function del(vitri) {
+            product_list.splice(vitri, 1);
+            document.getElementById('products').innerHTML = show();
+        }
+        document.getElementById('products').innerHTML = show();
+    </script>
+    <h1>Our stuffs</h1>
+        <form style="display:inline-block">
+            <input type="text" id="spmoi" placeholder="New product" value="spmoi"></form>
+            <button onclick="add()">Thêm</button>
+    <br>
+    <h2>Display All Product
+    </h2>
+    <div id="products">
+    </div>
+</body>
+</head>
+
+</html>
