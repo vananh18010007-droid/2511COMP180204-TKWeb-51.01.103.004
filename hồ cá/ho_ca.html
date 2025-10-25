@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Hồ cá vui nhộn</title>
     <meta charset="utf-8">
@@ -9,24 +8,24 @@
 </head>
 
 <body>
-    <button id="change-bg" onclick="changeBackground()">Đổi hình nền</button>
-    <button id="toggle-music" onclick="toggleMusic()">Phát nhạc</button>
     <script>
         const backgrounds = [
-            "images/bg1.jpg",
-            "images/bg2.jpg",
-            "images/bg3.webp"
+            "https://vananh18010007-droid.github.io/2511COMP180204-TKWeb-51.01.103.004/img/bg1.jpg",
+            "https://vananh18010007-droid.github.io/2511COMP180204-TKWeb-51.01.103.004/img/bg2.jpg",
+            "https://vananh18010007-droid.github.io/2511COMP180204-TKWeb-51.01.103.004/img/bg3.webp"
         ];
         let currentIndex = 0;
         function changeBackground() {
             currentIndex = (currentIndex + 1) % backgrounds.length;
-
-            document.body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+            document.body.style.backgroundImage = `url(${backgrounds[currentIndex]})`;
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundAttachment = "fixed";
         }
     </script>
-
     <script>
-        const music = new Audio("images/nen.mp3");
+        const music = new Audio("little.mp3");
         music.loop = true;
 
         let isPlaying = false;
@@ -43,36 +42,23 @@
             isPlaying = !isPlaying;
         }
     </script>
-
-
-    <div class="aquarium" id="aquarium">
-        <div id="content">
-            <div id="shark"><img src="images/shark.png" ; width="auto" height="auto"></div>
-        </div>
-        <div id="content">
-            <div id="diver1"><img src="images/diver1.png" ; width="auto" height="auto"></div>
-        </div>
-        <div id="content">
-            <div id="diver2"><img src="images/diver2.png" ; width="auto" height="auto"></div>
-        </div>
-        <div id="content">
-            <div id="diver3"><img src="images/diver3.png" ; width="auto" height="auto"></div>
-        </div>
-        <div id="content">
-            <div id="faintschool"><img src="images/faintSchool.png" ; width="auto" height="auto"></div>
-        </div>
-        <div id="content">
-            <div id="turtle"><img src="images/turtle.png" ; width="auto" height="auto"></div>
-        </div>
-        <div id="content">
-            <div id="goldfish"><img src="images/goldFishSchool.png" ; width="auto" height="auto"></div>
-        </div>
-        <div id="content">
-            <div id="faintschool"><img src="images/faintSchool.png" ; width="auto" height="auto"></div>
-        </div>
-        <div id="content">
-            <div id="faintschool2"><img src="images/faintSchool.png" ; width="auto" height="auto"></div>
-        </div>
+    <div class="hover">
+        <div class="content">
+        <div class="shark"><img src="https://vananh18010007-droid.github.io/2511COMP180204-TKWeb-51.01.103.004/img/shark.png"></div>
+        <div class="faint"><img src="https://vananh18010007-droid.github.io/2511COMP180204-TKWeb-51.01.103.004/img/faintSchool.png"></div>
+        <div class="diver2"><img src="https://vananh18010007-droid.github.io/2511COMP180204-TKWeb-51.01.103.004/img/diver2.png"></div>
+        <div class="faint faint-1"><img src="https://vananh18010007-droid.github.io/2511COMP180204-TKWeb-51.01.103.004/img/faintSchool.png"></div>
+        <div class="diver3"><img src="https://vananh18010007-droid.github.io/2511COMP180204-TKWeb-51.01.103.004/img/diver3.png"></div>
+    </div></div>
+    <div class="hover">
+        <div class="turtle"><img src="https://vananh18010007-droid.github.io/2511COMP180204-TKWeb-51.01.103.004/img/turtle.png"></div>
+        <div class="diver1"><img src="https://vananh18010007-droid.github.io/2511COMP180204-TKWeb-51.01.103.004/img/diver1.png"></div>
+        <div class="faint faint-2"><img src="https://vananh18010007-droid.github.io/2511COMP180204-TKWeb-51.01.103.004/img/faintSchool.png"></div>
+        <div class="fish"><img src="https://vananh18010007-droid.github.io/2511COMP180204-TKWeb-51.01.103.004/img/goldFishSchool.png"></div>
+    </div>
+    <div class="button">
+    <button id="change-bg" onclick="changeBackground()" style="background-color: rgb(160, 92, 150); border-radius: 10px; padding:10px">Đổi hình nền</button>
+    <button id="toggle-music" onclick="toggleMusic()" style="background-color: rgb(158, 92, 132); border-radius: 10px; padding:10px">Phát nhạc</button>
     </div>
 </body>
 
