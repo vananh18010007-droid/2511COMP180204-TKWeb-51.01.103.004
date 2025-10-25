@@ -1,0 +1,165 @@
+.hover {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.hover img {
+    height: auto;
+}
+.button{
+    display:inline-block;
+    margin-left: 45%;
+    font-size: 30px;
+    border-radius: 20px;
+}
+.content{
+}
+.shark{
+    position:absolute;
+    animation-name: Shark;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    left: 0vw; 
+    top: 50vh;
+}
+.shark img {
+    width: 800px;
+    height: 300px; 
+}
+@keyframes Shark{
+    0%   { left:0vw; top:80vh;  }
+    20%  { left:40vw; top:20vh; }
+    40%  { left:80vw; top:40vh;}
+    60%  { left:90vw; top:10vh; }
+    80%  { left:20vw; top:70vh; }
+   100% { left:0vw; top:80vh; transform:scaleX(-1); }
+}
+.faint{
+    left:100px;
+    top:400px;
+    position:absolute;
+    animation-name: Faint;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    width: 450px; 
+    height: auto;
+}
+.faint-1 {
+    left:80vw;
+    top: 50vh;
+}
+.faint-2 {
+    left: 50vw;
+    top: 20vh;
+}
+@keyframes Faint{
+    0%   { transform: scale(1); }
+    50%  { transform: scale(2); } 
+    100% { transform: scale(1); }
+}
+.turtle{
+    position:absolute;
+    animation-name: Turtle;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    width: 100%; 
+    height: auto;
+}
+.turtle img {
+    width: 200px;
+    height: 50px; 
+}
+@keyframes Turtle{
+    0% {left:100px; top:400px;}
+    20% {left:300px; top:400px;}
+    40% {left:500px; top:300px;}
+    50% {left:600px; top:50px;}
+    60% {left:600px; top:100px;}
+    80% {left:500px; top:200px;}
+    100% {left:100px; top:400px; transform:scaleX(-1);}
+}
+.diver1{
+    width: 200px; 
+    height: 300px;
+    position:absolute;
+    animation-name: Diver1;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+.diver1 img {
+    width: 100px;
+    height: 500px; 
+}
+@keyframes Diver1 {
+    0%   { left: 20vw; top: 0vh;}
+    50%  {left: 20vw; top: 90vh;}
+    100% {left: 20vw; top: 0vh; transform:scaleY(-1);}   
+}
+.diver2{
+    width: 200px; 
+    height: 300px;
+    position:absolute;
+    animation-name: Diver2;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+.diver2 img {
+    width: 100px;
+    height: 500px; 
+}
+@keyframes Diver2 {
+     0%   { left: 50vw; top: 0vh;}
+    50%  {left: 50vw; top: 90vh;}
+    100% {left: 50vw; top: 0vh; transform:scaleY(-1);}   
+}
+.diver3{
+    width: 200px; 
+    height: 300px;
+    position:absolute;
+    animation-name: Diver3;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+.diver3 img {
+    width: 100px;
+    height: 500px; 
+}
+@keyframes Diver3 {
+     0%   { left: 35vw; top: 0vh;}
+    50%  {left: 35vw; top: 90vh;}
+    100% {left: 35vw; top: 0vh; transform:scaleY(-1);}   
+}
+.fish{
+    position:absolute;
+    animation-name: Fish;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    left: 0vw; 
+    top: 50vh;
+}
+.fish img {
+    width: 400px;
+    height: 200px; 
+}
+@keyframes Fish{
+    0%   { left:0vw; top:80vh;  }
+    20%  { left:40vw; top:20vh; }
+    40%  { left:80vw; top:40vh;}
+    60%  { left:90vw; top:10vh; }
+    80%  { left:20vw; top:70vh; }
+   100% { left:0vw; top:80vh; transform:scaleX(-1); }
+}
